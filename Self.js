@@ -63,58 +63,6 @@ msg.channel.sendFile(avatar);
 msg.channel.sendMessage("**Beep**")
    }
 };
-
-//setInterval(() => {
-//bot.channels.get("251881273939722240").sendMessage("@everyone").then(msg =>
-//msg.delete())
-//}, 60000)
-
-  
-  // if (msg.author.id === "243364193263288320") {
-      // if (msg.content.indexOf("<@" + bot.user.id + ">") > -1) {
-        // let Cleverbot = require('cleverbot-node');
-        // cleverbot = new Cleverbot;
-        // cleverMessage = msg.content;
-        // Cleverbot.prepare(function(){
-          // cleverbot.write(cleverMessage, function (response) {
-            // setTimeout(function() {
-              // bot.channels.get(channel.id);
-              // channel.startTyping()
-            // }, 1500)
-            // setTimeout(function() {
-              // channel.sendMessage(msg.author + ", " + response.message);
-            // }, 5000)
-            // setTimeout(function() {
-              // bot.channels.get(channel.id);
-              // channel.stopTyping()
-            // }, 5200)
-          // });
-        // });
-      // }
-    // }
-    
-    
-      // if (msg.author.id === "239440197434081284") {
-      // if(msg.channel.id == 252559534898413568)  
-// 	var cleverMessage = msg.content.split(' ').splice(1).join(' ');
-// 	Cleverbot.prepare(function () {
-// 	cleverbot.write(cleverMessage, function (response) {
-// 	msg.channel.sendMessage(response.message);
-            // setTimeout(function() {
-              // bot.channels.get(channel.id);
-              // channel.startTyping()
-            // }, 1500)
-            // setTimeout(function() {
-              // channel.sendMessage(msg.author + ", " + response.message);
-      //      }, 5000)
-            // setTimeout(function() {
-        //       bot.channels.get(channel.id);
-              // channel.stopTyping()
-            // }, 5200)
-          // });
-        // });
-      // }
-  
     //UPTIME
 if (msg.content === prefix + "uptime") {
 var date = new Date(bot.uptime);
