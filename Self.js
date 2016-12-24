@@ -62,7 +62,7 @@ var avatar = userav.avatarURL;
 msg.channel.sendFile(avatar);
 msg.channel.sendMessage("**Beep**")
    }
-};
+};  
     //UPTIME
 if (msg.content === prefix + "uptime") {
 var date = new Date(bot.uptime);
@@ -83,52 +83,15 @@ msg.channel.sendMessage(strDate)
 
 
   if (command == "eval") {
-var evalcode = msg.content.split(" ").splice(1).join(" ");
-		try {
-			var evaled = eval(evalcode);
-			if (typeof evaled !== "string")
-				evaled = require("util").inspect(evaled);
-			msg.channel.sendMessage("Output:\n```x1\n" + clean(evaled) + "```");
-		}
-		catch (err) {
-			msg.channel.sendMessage("Error: " + clean(err));
-		}
-
-		function clean(text) {
-			if (typeof(text) === "string") {
-				return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-			}
-			else {
-				return text;
-			}
-		}
+          try {
+          let code = eval(msg.content.split(" ").slice(1).join(" "));
+          channel.sendMessage("**=>** " + code);
+        } catch (err) {
+          channel.sendMessage("**=>** " + err);
+        }
+        return;
     }
-    
-//     if (command == "hehe") {
-//   msg.channel.sendMessage(":thinking:").then((msg) => {
-//       msg.edit(":thinking:").then(55000)
-//       // msg.edit(":middle_finger:").then(55000)
-//       msg.edit(":thinking:").then(55000)
-//       msg.edit(":thinking:").then(55000)
-//       msg.edit(":middle_finger:").then(55000)
-//       msg.edit(":middle_finger:").then(55000)
-//       msg.edit(":middle_finger:").then(55000)
-//     });
-//   }
-
 });
 
-
-
-//         try {
-//           let code = eval(msg.content.split(" ").slice(1).join(" "));
-//           channel.sendMessage("**=>** " + code);
-//         } catch (err) {
-//           channel.sendMessage("**=>** " + err);
-//         }
-//         return;
-//     }
-
-// });
 
 bot.login(config.token);
