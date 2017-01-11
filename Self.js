@@ -2,8 +2,6 @@
 let Discord = require("discord.js");
 let bot = new Discord.Client();
 let config = require('./config.json');
-var beautify = require('js-beautify').js_beautify;
-var moment = require('moment')
 
 function AaN(args, i) {
   if (args[i] === null || args[i] === "" || args[i] === undefined) return true;
@@ -20,7 +18,7 @@ bot.on('ready', () => {
 bot.on('message', msg => {
   if (msg.author.id !== bot.user.id) return; //Only allows you to work with it, since it's called a selfbot :P
   
-  let prefix = "prefix"
+  let prefix = config.prefix
   let channel = msg.channel;
   let guild = msg.guild;
   let text = msg.content;
