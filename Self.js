@@ -215,3 +215,4 @@ msg.channel.sendEmbed(
         }  
 });
 bot.login(config.token);
+
