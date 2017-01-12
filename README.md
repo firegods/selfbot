@@ -14,7 +14,7 @@ Make a new folder so everything will go there.
 #Forth
 Go to that folder
 
-#Fith
+#Fifth
 Type in the cmd `npm install discord.js`
 Now discord.js should be installed
 
@@ -24,8 +24,8 @@ CD to the folder that your stuff is going to go in.
 #Seventh
 type in `git clone https://github.com/samakiii/selfbot/`
 
-#Seventh
+#Eighth
 Edit your token and prefix in config.json
 
-#Eigth
+#Nineth
 type in `node Self.js`
