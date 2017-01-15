@@ -16,7 +16,7 @@ bot.on('ready', () => {
 
 
 bot.on('message', msg => {
-  if (msg.author.id !== bot.user.id) return; //Only allows you to work with it, since it's called a selfbot :P
+  if (msg.author.id !== bot.user.id) return;
 
   let prefix = config.prefix;
   let channel = msg.channel;
@@ -41,7 +41,7 @@ bot.on('message', msg => {
          .then(messages => {
              messages.map(msg => msg.delete().catch(console.error));
          }).catch(console.error);
- } else if (command == "clear") { //p delets your messages. purge deletes everyones messages.
+ } else if (command == "clear") {
      let delamount = parseInt(args[1]) ? parseInt(args[1]) : 1;
      msg.channel.fetchMessages({
              limit: 100
