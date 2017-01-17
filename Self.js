@@ -10,8 +10,6 @@ function AaN(args, i) {
 
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.username}#${bot.user.discriminator}`);
-  console.log(`${bot.user.username}, your selfbot is online and ready to rock and roll!`)
-  console.log(`${bot.user.username}, you're on ${bot.guilds.size} servers with ${bot.channels.size} channels and with ${bot.users.size} users`)
 });
 
 
@@ -223,23 +221,6 @@ if (command == "help") {
         }
     );
 }
-        
-        if (command == 'notify') {
-           let noto = msg.content.split(" ").slice(1).join(" ");
-           msg.delete();
-           msg.channel.sendMessage("<@&252167569677615106>")
-           msg.channel.sendMessage("", {
-               embed: {
-                   color: 0xfff00,
-                   author: {
-                       name: `Announcement`,
-                       icon_url: msg.author.avatarURL
-                   },
-                   description: noto
-               }
-           });
-       }
-
        if (command == 'embed') {
            let noto = msg.content.split(" ").slice(1).join(" ");
            msg.delete();
