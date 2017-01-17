@@ -1,4 +1,7 @@
 #AFTER YOU ARE DONE WITH EVERYTHING BELOW DO `npm install winston` & `npm install moment`
+#HOW TO GET YOUR TOKEN
+#CTRL + SHIFT + I
+ ![alt tag](https://my.shinobu.io/mndbtj.png)
 
 #First off install node.js, I will provide you the current version of this time being. 
 https://nodejs.org/dist/v7.4.0/node-v7.4.0-x86.msi
