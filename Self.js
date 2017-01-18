@@ -12,9 +12,7 @@ var util = require('util')
 ////////////////////////////////////////////
 //                                        //
 //                                        //
-//          DONT REMOVE                   //
-//    SELF BOT MADE BY SAMAKI#1857        //
-//          DISCORD.JS#11                 //
+//            DISCORD.JS#11               //
 //                                        //
 //                                        //
 ////////////////////////////////////////////
@@ -22,7 +20,7 @@ var util = require('util')
 
 
 process.on('uncaughtException', function(err) {
-    console.log('DAAAAAAAAAM DUD I CAUGHT EXCEPTION?!??!: ' + err);
+    console.log('DAAAAAAAAAM DUD I CAUGHT EXCEPTION?!??!: ' + err);//STOPS THE BOT FROM CRASHING
 });
 
 
