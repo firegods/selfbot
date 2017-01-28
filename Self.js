@@ -234,19 +234,18 @@ bot.on('message', msg => {
             }
         );
     }
-    if (command == 'embed') {
-        let noto = msg.content.split(" ").slice(1).join(" ");
-        msg.delete();
-        msg.channel.sendMessage("", {
-            embed: {
-                color: 0x42f453,
-                author: {
-                    icon_url: msg.author.avatarURL
-                },
-                description: noto
-            }
-        });
-    }
+       if (command == 'embed') {
+           let noto = msg.content.split(" ").slice(1).join(" ");
+           msg.delete();
+           var embed = new Discord.RichEmbed();
+           embed.setColor(randomcolor())
+               .setDescription(noto)
+           msg.channel.sendEmbed(
+               embed, {
+                   disableEveryone: true
+               }
+           );
+       }
 
     if (msg.content.toLowerCase().startsWith(prefix + "cb")) {
         var cb = msg.content.split(" ").slice(1).join(" ");
