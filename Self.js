@@ -269,8 +269,9 @@ bot.on('message', msg => {
         })
     }
 
-    if (command == "invite")
+    if (command == "invite") {
         msg.guild.channels.get(`${msg.channel.id}`).createInvite().then(invite => msg.channel.sendMessage('http://discord.gg/' + invite.code));
+    }
 
     if (command == "afk") {
         let nickname = msg.guild.member(bot.user).nickname;
