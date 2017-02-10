@@ -8,14 +8,16 @@ var util = require('util') //npm i util
 
 
 
+//////////////////////////////////////
+//##################################//
+//#                                #//
+//#         SELFBOT MADE BY        #//
+//#         SAMAKI#0037            #//
+//#         DISCORD v11            #//
+//#                                #//
+//##################################//
+//////////////////////////////////////
 
-////////////////////////////////////////////
-//                                        //
-//                                        //
-//            DISCORD.JS#11               //
-//                                        //
-//                                        //
-////////////////////////////////////////////
 
 
 
@@ -140,22 +142,20 @@ bot.on('message', msg => {
 
 
     if (command === "eval") {
-    let suffix = msg.content.slice(6);    
-    try {
-			let result = eval(suffix);
-			let code = eval(msg.content.split(" ").slice(1).join(" "));
-			if(typeof(result)=="object") {
-				result = util.inspect(result);
-			}
-            if (code === null) code = 'null';
+       try {
+           let code = eval(msg.content.split(" ").slice(1).join(" "));
+           if (typeof(result) == "object") {
+               result = util.inspect(result);
+           }
+           if (code === null) code = 'null';
 
-            if (code.toString().includes(bot.token) ||
-                util.toString().includes(bot.token)) return msg.channel.send('Cannot complete eval due to token.'); 
-			msg.channel.sendCode('js', `${code}`)
-		} catch(err) {
-			msg.channel.sendCode('js', `${err}`);
-		}
-	} 
+           if (code.toString().includes(bot.token) ||
+               util.toString().includes(bot.token)) return msg.channel.send('Cannot complete eval due to token.');
+           msg.channel.sendCode('js', `${code}`)
+       } catch (err) {
+           msg.channel.sendCode('js', `${err}`);
+       }
+   }
 	
 	
     if (command == "userinfo") {
