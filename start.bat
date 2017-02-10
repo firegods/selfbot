@@ -1,5 +1,5 @@
 @echo off
 title Selfbot
-color 3a
-node Self.js
+color 2b
+node bot.js
 goto start
