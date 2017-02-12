@@ -116,7 +116,11 @@ bot.on('message', msg => {
 
 
 
-    if (msg.content === prefix + "stats") {
+   if (msg.content === prefix + "stats") {
+        var date = new Date(bot.uptime);
+        var days = date.getUTCDate() - 1;
+        var hours = date.getUTCHours();
+        var minutes = date.getUTCMinutes();
         var embed = new Discord.RichEmbed();
         embed.setColor(randomcolor())
             .setFooter(' ', ' ')
@@ -135,7 +139,7 @@ bot.on('message', msg => {
     
     //THIS WILL RESET THE BOT IF YOU RUN A FOREVER JS PROCESS. (LIKE PM2 OR NODEMON)
     if (msg.content.toLowerCase() == prefix + 'r' || msg.content.toLowerCase() == prefix + 'reload') {
-        msg.channel.sendMessage(`Restarted. Heartbeat Pong! \`${bot.ping}\``).then(function(t) {
+        msg.channel.sendMessage(`Restarted. Heartbeat Pong! \`${bot.ping}ms\``).then(function(t) {
             process.exit(1);
         });
     }
