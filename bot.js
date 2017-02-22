@@ -291,7 +291,7 @@ bot.on('message', msg => {
         if (!msg.mentions.users.first()) return msg.edit('**Unblock** > Failed, no user.');
 
         msg.mentions.users.first().unblock().then(() => {
-            msg.edit("**Person** > Blocked");
+            msg.edit("**Person** > UnBlocked");
         })
     }
 
@@ -513,7 +513,7 @@ bot.on('message', msg => {
             .addField('Softban', `Softbans the user that was mentioned`)
             .addField('Kick', `Kicks the user that was mentioned`)
             .addField('Warn', `Warns the user that was mentioned`)
-            .addField('Unbans', `Unbans the user that was specified. <By ID or Username>`)
+            .addField('Unban', `Unbans the user that was specified. <By ID or Username>`)
             .addField('Userinfo', `Gets user information about the author. **ME**`)
             .addField('Whois', `Gets information about the user that was mentioned`)
             .addField('Serverinfo', `Gets information about the guild.`)
