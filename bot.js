@@ -536,7 +536,7 @@ bot.on('message', msg => {
             embed.setAuthor(`Blaze#0037 (255815122616844288)`, `https://cdn.discordapp.com/attachments/270262447477227521/290301777092542474/8f7e7bb64abf29c868daa959283e6ac2.jpg`)
             .setColor(0x244bcc)
             .setFooter('Selfbot Made By Blaze#0037', ' ')
-            .addField('Link', `http://github.com/samakiii/selfbot`, true)
+            .addField('Link', `http://github.com/blazeee/selfbot`, true)
             .addField('Where to find **me**', 'https://discord.gg/3n7CHs4')
         msg.channel.sendEmbed(
             embed, {
