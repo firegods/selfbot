@@ -12,7 +12,7 @@ var util = require('util') //npm i util
 //##################################//
 //#                                #//
 //#         SELFBOT MADE BY        #//
-//#         SAMAKI#0037            #//
+//#         BLAZE#0037             #//
 //#         DISCORD v11            #//
 //#                                #//
 //##################################//
@@ -362,7 +362,7 @@ bot.on('message', msg => {
                 disableEveryone: true
             }
         );
-        msg.channel.sendMessage(`***${user.username}*** ***Has been warned*** 👌`)
+        msg.channel.sendMessage(`***${user.username}*** ***Has been warned*** ðŸ‘Œ`)
         var embed = new Discord.RichEmbed();
         embed.setAuthor(`Moderator`, ` `)
             .setColor(randomcolor())
@@ -500,7 +500,7 @@ bot.on('message', msg => {
             embed.setAuthor(`${msg.author.username}`, `${msg.author.avatarURL}`)
             .setColor(randomcolor())
             .setDescription(`Selfbot Help`)
-            .setFooter('Selfbot Made By Sama#0037', ' ')
+            .setFooter('Selfbot Made By Blaze#0037', ' ')
             .addField('Ping', `Get a timestamp of how long it takes to send a message.`)
             .addField('Purge', `Deletes a certain amount of messages.`)
             .addField('Clear', `Deletes a certain amount of **my** messages`)
@@ -533,17 +533,40 @@ bot.on('message', msg => {
     
         if (msg.content === prefix + "info") {
         var embed = new Discord.RichEmbed();    
-            embed.setAuthor(`Sama#0037 (255815122616844288)`, `https://cdn.discordapp.com/avatars/255815122616844288/3695286eb5f03fd1975bdcfbff8d2952.jpg?size=1024`)
+            embed.setAuthor(`Blaze#0037 (255815122616844288)`, `https://cdn.discordapp.com/attachments/270262447477227521/290301777092542474/8f7e7bb64abf29c868daa959283e6ac2.jpg`)
             .setColor(0x244bcc)
-            .setFooter('Selfbot Made By Sama#0037', ' ')
+            .setFooter('Selfbot Made By Blaze#0037', ' ')
             .addField('Link', `http://github.com/samakiii/selfbot`, true)
-            .addField('Where to find **me**', 'https://discord.gg/SvDzKn7')
+            .addField('Where to find **me**', 'https://discord.gg/3n7CHs4')
         msg.channel.sendEmbed(
             embed, {
                 disableEveryone: true
             }
         );
     }
+if (msg.content.startsWith(prefix + "pmspam")) { //THIS WAS MADE BY Nuno#0558
+    let suffix = msg.content.split(' ').slice(1);;
+        try {
+        var usertospam = msg.mentions.users.first();
+        var timesRun = 0;
+        var numberspam = suffix[1];
+        console.log(numberspam)
+        var tospam = msg.content.split(' ').slice(3).join(' ');
+        console.log(tospam)
+        let messagecount = parseInt(numberspam) ? parseInt(numberspam) : 1;
+       var interval = setInterval(function() {
+           usertospam.sendMessage(tospam)
+           timesRun += 1
+           if (timesRun === messagecount) {
+               clearInterval(interval)
+           }
+       }, 1)
+
+       usertospam.sendMessage(interval.length);
+        } catch (err) {
+msg.channel.sendMessage("Error, user not found.")
+        }
+}
     
 });
 bot.login(config.token);
