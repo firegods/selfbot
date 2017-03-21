@@ -12,7 +12,7 @@ var util = require('util') //npm i util
 //##################################//
 //#                                #//
 //#         SELFBOT MADE BY        #//
-//#         BLAZE#0037             #//
+//#         Ethereal#0037          #//
 //#         DISCORD v11            #//
 //#                                #//
 //##################################//
@@ -500,7 +500,7 @@ bot.on('message', msg => {
             embed.setAuthor(`${msg.author.username}`, `${msg.author.avatarURL}`)
             .setColor(randomcolor())
             .setDescription(`Selfbot Help`)
-            .setFooter('Selfbot Made By Blaze#0037', ' ')
+            .setFooter('Selfbot Made By Ethereal#0037', ' ')
             .addField('Ping', `Get a timestamp of how long it takes to send a message.`)
             .addField('Purge', `Deletes a certain amount of messages.`)
             .addField('Clear', `Deletes a certain amount of **my** messages`)
@@ -533,10 +533,10 @@ bot.on('message', msg => {
     
         if (msg.content === prefix + "info") {
         var embed = new Discord.RichEmbed();    
-            embed.setAuthor(`Blaze#0037 (255815122616844288)`, `https://cdn.discordapp.com/attachments/270262447477227521/290301777092542474/8f7e7bb64abf29c868daa959283e6ac2.jpg`)
+            embed.setAuthor(`Ethereal#0037 (255815122616844288)`, `https://cdn.discordapp.com/attachments/270262447477227521/290301777092542474/8f7e7bb64abf29c868daa959283e6ac2.jpg`)
             .setColor(0x244bcc)
-            .setFooter('Selfbot Made By Blaze#0037', ' ')
-            .addField('Link', `http://github.com/blazeee/selfbot`, true)
+            .setFooter('Selfbot Made By Ethereal#0037', ' ')
+            .addField('Link', `http://github.com/etherezl/selfbot`, true)
             .addField('Where to find **me**', 'https://discord.gg/3n7CHs4')
         msg.channel.sendEmbed(
             embed, {
